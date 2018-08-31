@@ -24,13 +24,36 @@ html(lang="en")
 
     section.Showcase.py-5
       .overlay.text-white
-        .container
-          .row.align-items-lg-center
+        .container.h-100
+          .row.h-100.align-items-center
             .col-lg-6.text-center
-              h1.display-2.mt-md-2.mt-lg-0.pt-md-5.pt-lg-0 Do What You Dream Of..
+              h1.display-3 Do What You Dream Of...
               p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, recusandae!
               a.btn.btn-outline-secondary.btn-lg.text-white(href="#")
                 i.fas.fa-arrow-right.mr-2
                 | Read More 
-            .col-lg-6
-              img.img-fluid.d-none.d-lg-block(src=require("./images/book.png"))
+            .col-lg-6.d-none.d-lg-block
+              img.img-fluid(src=require("./images/book.png"))
+
+    section.Newsletter.bg-dark.text-white.py-5
+      .container
+        .row
+          .col-md-4
+            input.form-control.form-control-lg.mb-sm-3(type="text" placeholder="Enter Name")
+          .col-md-4
+            input.form-control.form-control-lg.mb-sm-3(type="email" placeholder="Enter Email")
+          .col-md-4
+            button.btn.btn-primary.btn-lg.btn-block
+              i.fas.fa-envelope-open-o
+              | Subscribe
+    
+    section.Boxes.py-5
+      .container
+        .row
+          - var headings = ["Be Better", "Be Smarter", "Be Faster", "Be Stronger"];
+          for text, index in headings
+            .col-md-3
+              .card.text-center(class=`${index % 2 == 0 ? "border-primary" : "bg-primary text-white"} ${index == headings.length -1 ? "" : "mb-sm-3"}`)
+                .card-body
+                  h3(class=`${index % 2 == 0 ? "text-primary" : ""}`) #{text}
+                  p(class=`${index % 2 == 0 ? "text-muted" : ""}`) Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, optio!

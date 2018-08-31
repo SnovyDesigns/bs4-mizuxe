@@ -30,3 +30,13 @@ body {
     height: 100%;
   }
 }
+
+@media (max-width: 768px) {
+  .Showcase {
+    min-height: 500px;
+
+    h1 {
+      font-size: 3.5rem;
+    }
+  }
+}
