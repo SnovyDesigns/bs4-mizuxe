@@ -57,3 +57,23 @@ html(lang="en")
                 .card-body
                   h3(class=`${index % 2 == 0 ? "text-primary" : ""}`) #{text}
                   p(class=`${index % 2 == 0 ? "text-muted" : ""}`) Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, optio!
+
+    section.About.py-5.text-center.bg-light
+      .container
+        .row
+          .col
+            .info-header.mb-5.w-50.mx-auto.border-bottom
+              h1.text-primary.pb-3 Why This Book?
+              p.lead.pb-3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, repellat consequuntur harum dolorem cupiditate magnam!
+            #accordion
+              for value, index in ["Get Inspired", "Gain The Knowledge", "Open Your Mind"]
+                .card
+                  .card-header
+                    h5.mb-0
+                      div(data-parent="#accordion" data-toggle="collapse" href=`#collapse${index}`)
+                        i.fas.fa-arrow-alt-circle-down.mr-2
+                        | #{value}
+                  div.collapse(class=`${index == 0 ? "show" : ""}`, id=`collapse${index}`)
+                    .card-body Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit accusamus totam ipsam saepe molestiae necessitatibus sapiente ea placeat, perspiciatis mollitia, hic cumque numquam rem at eligendi quod magnam, quidem recusandae expedita impedit enim eius assumenda ab! Doloribus accusamus, non nam ullam aut, pariatur est provident temporibus molestias fugit culpa debitis.
+    
+                        
