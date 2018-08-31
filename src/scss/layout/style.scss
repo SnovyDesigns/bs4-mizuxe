@@ -31,6 +31,25 @@ body {
   }
 }
 
+.Authors {
+  img {
+    margin-top: -50px;
+  }
+
+  .card:hover {
+    background: $primary;
+    color: #ffffff;
+
+    .text-muted {
+      color: rgba($color: #fff, $alpha: 0.5) !important;
+    }
+  }
+
+  .fab {
+    color: #ffffff;
+  }
+}
+
 @media (max-width: 768px) {
   .Showcase {
     min-height: 500px;

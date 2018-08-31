@@ -22,6 +22,7 @@ html(lang="en")
               li.nav-item
                 a.nav-link(href=`#${name}`)= Name(name) 
 
+    //- SHOWCASE
     section.Showcase.py-5
       .overlay.text-white
         .container.h-100
@@ -35,6 +36,7 @@ html(lang="en")
             .col-lg-6.d-none.d-lg-block
               img.img-fluid(src=require("./images/book.png"))
 
+    //- NEWSLETTER
     section.Newsletter.bg-dark.text-white.py-5
       .container
         .row
@@ -47,10 +49,11 @@ html(lang="en")
               i.fas.fa-envelope-open-o
               | Subscribe
     
+    //- BOXES
     section.Boxes.py-5
       .container
         .row
-          - var headings = ["Be Better", "Be Smarter", "Be Faster", "Be Stronger"];
+          - const headings = ["Be Better", "Be Smarter", "Be Faster", "Be Stronger"];
           for text, index in headings
             .col-md-3
               .card.text-center(class=`${index % 2 == 0 ? "border-primary" : "bg-primary text-white"} ${index == headings.length -1 ? "" : "mb-sm-3"}`)
@@ -58,6 +61,7 @@ html(lang="en")
                   h3(class=`${index % 2 == 0 ? "text-primary" : ""}`) #{text}
                   p(class=`${index % 2 == 0 ? "text-muted" : ""}`) Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, optio!
 
+    //- ABOUT
     section.About.py-5.text-center.bg-light
       .container
         .row
@@ -75,5 +79,31 @@ html(lang="en")
                         | #{value}
                   div.collapse(class=`${index == 0 ? "show" : ""}`, id=`collapse${index}`)
                     .card-body Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit accusamus totam ipsam saepe molestiae necessitatibus sapiente ea placeat, perspiciatis mollitia, hic cumque numquam rem at eligendi quod magnam, quidem recusandae expedita impedit enim eius assumenda ab! Doloribus accusamus, non nam ullam aut, pariatur est provident temporibus molestias fugit culpa debitis.
-    
-                        
+
+    //- AUTHORS
+    section.Authors.my-5.text-center
+      .container
+        .row
+          .col
+            .info-header.mb-5.w-50.mx-auto.border-bottom
+              h1.text-primary.pb-3 Meet The Authors
+              p.lead.pb-3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, repellat consequuntur harum dolorem cupiditate magnam!
+        .row
+          - const workers = {"Lead Writer": "Susan Williams", "Co-writer": "Grace Smith", "Editor": "John Doe", "Designer": "Kevin Swanson"};
+          - let i = 0;
+          for author, job in workers
+            .col-lg-3.col-md-6
+              .card
+                .card-body
+                  img.img-fluid.rounded-circle.w-50.mb-3(src=require(`./images/person${i++}.jpg`))
+                  h3 #{author}
+                  h5.text-muted #{job}
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatem quam veniam placeat sunt esse.
+                  .d-flex.justify-content-center
+                    for social in ["facebook", "twitter", "instagram"]
+                      .p-4
+                        a(href=`http://${social}.com`) 
+                          i(class=`fab fa-${social}`)
+
+
+
