@@ -1,3 +1,10 @@
 import './scss/main.scss';
-import 'bootstrap';
+import 'bootstrap/js/dist/collapse';
+import 'bootstrap/js/dist/scrollspy';
 import './js/scripts';
+import './images/book.png';
+import './images/mlogo.png';
+import './images/person0.jpg';
+import './images/person1.jpg';
+import './images/person2.jpg';
+import './images/person3.jpg';

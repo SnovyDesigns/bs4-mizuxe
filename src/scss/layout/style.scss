@@ -36,12 +36,21 @@ body {
     margin-top: -50px;
   }
 
-  .card:hover {
-    background: $primary;
-    color: #ffffff;
+  .card {
+    i {
+      color: $primary;
+    }
+    :hover {
+      background: $primary;
+      color: #ffffff;
 
-    .text-muted {
-      color: rgba($color: #fff, $alpha: 0.5) !important;
+      i {
+        color: #ffffff;
+      }
+
+      .text-muted {
+        color: rgba($color: #fff, $alpha: 0.5) !important;
+      }
     }
   }
 

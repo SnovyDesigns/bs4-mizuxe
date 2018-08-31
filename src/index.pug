@@ -6,9 +6,9 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Mizuxe Book Theme
   
-  body
+  body#home(data-spy="scroll" data-target="#main-nav")
     
-    nav.navbar.navbar-expand-md.navbar-light.fixed-top.py-4
+    nav#main-nav.navbar.navbar-expand-md.navbar-light.fixed-top.py-4
       .container
         a.navbar-brand(href="#home")
           img.mr-2(src=require("./images/mlogo.png"), width="50", height="50")
@@ -62,7 +62,7 @@ html(lang="en")
                   p(class=`${index % 2 == 0 ? "text-muted" : ""}`) Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, optio!
 
     //- ABOUT
-    section.About.py-5.text-center.bg-light
+    section#about.About.py-5.text-center.bg-light
       .container
         .row
           .col
@@ -81,7 +81,7 @@ html(lang="en")
                     .card-body Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit accusamus totam ipsam saepe molestiae necessitatibus sapiente ea placeat, perspiciatis mollitia, hic cumque numquam rem at eligendi quod magnam, quidem recusandae expedita impedit enim eius assumenda ab! Doloribus accusamus, non nam ullam aut, pariatur est provident temporibus molestias fugit culpa debitis.
 
     //- AUTHORS
-    section.Authors.my-5.text-center
+    section#authors.Authors.my-5.text-center
       .container
         .row
           .col
@@ -105,5 +105,39 @@ html(lang="en")
                         a(href=`http://${social}.com`) 
                           i(class=`fab fa-${social}`)
 
+    //- CONTACT
+    section#contact.Contact.bg-light.py-5
+      .container
+        .row
+          .col-lg-9
+            h3 Get In Touch
+            p.lead Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, culpa.
+            form
+              .input-group.input-group-lg.mb-3
+                .input-group-prepend
+                  span.input-group-text
+                    i.fas.fa-user
+                input.form-control(type="text", placeholder="Name")
+              
+              .input-group.input-group-lg.mb-3
+                .input-group-prepend
+                  span.input-group-text
+                    i.fas.fa-envelope
+                input.form-control(type="text", placeholder="Email")
+              
+              .input-group.input-group-lg.mb-3
+                .input-group-prepend
+                  span.input-group-text
+                    i.fas.fa-pencil-alt
+                textarea.form-control(type="text", placeholder="Message", row="5")
+              input.btn.btn-primary.btn-block.btn-lg(type="submit", value="Submit")
+          .col-lg-3.align-self-end.d-none.d-lg-block
+            img.img-fluid(src=require("./images/mlogo.png"))
 
-
+    footer.Footer.py-2.bg-primary.text-white
+      .container
+        .row.text-center
+          .col-md-6.ml-auto
+            p.lead.mb-0.text-white-50 Copyrights &copy; 
+              span#year
+              | &nbsp;| Mizuxe
