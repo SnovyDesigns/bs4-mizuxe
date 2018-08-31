@@ -5,7 +5,9 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Mizuxe Book Theme
+  
   body
+    
     nav.navbar.navbar-expand-md.navbar-light.fixed-top.py-4
       .container
         a.navbar-brand(href="#home")
@@ -16,6 +18,19 @@ html(lang="en")
         #navbarCollapse.collapse.navbar-collapse
           ul.navbar-nav.ml-auto
             for name in ["home", "about", "authors", "contact"]
-              - const Name = require("./utils/upperName.js")
+              - const Name = require("./utils/upperName.js");
               li.nav-item
-                a.nav-link(href=`#${name}`)= Name(name)
+                a.nav-link(href=`#${name}`)= Name(name) 
+
+    section.Showcase.py-5
+      .overlay.text-white
+        .container
+          .row.align-items-lg-center
+            .col-lg-6.text-center
+              h1.display-2.mt-md-2.mt-lg-0.pt-md-5.pt-lg-0 Do What You Dream Of..
+              p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, recusandae!
+              a.btn.btn-outline-secondary.btn-lg.text-white(href="#")
+                i.fas.fa-arrow-right.mr-2
+                | Read More 
+            .col-lg-6
+              img.img-fluid.d-none.d-lg-block(src=require("./images/book.png"))
