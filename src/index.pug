@@ -6,3 +6,16 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Mizuxe Book Theme
   body
+    nav.navbar.navbar-expand-md.navbar-light.fixed-top.py-4
+      .container
+        a.navbar-brand(href="#home")
+          img.mr-2(src=require("./images/mlogo.png"), width="50", height="50")
+          h3.d-inline.align-middle Mizuxe
+        button.navbar-toggler(data-target="#navbarCollapse" data-toggle="collapse")
+          span.navbar-toggler-icon
+        #navbarCollapse.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            for name in ["home", "about", "authors", "contact"]
+              - const Name = require("./utils/upperName.js")
+              li.nav-item
+                a.nav-link(href=`#${name}`)= Name(name)

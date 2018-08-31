@@ -44,7 +44,10 @@ module.exports = {
         test: /\.(scss|sass)$/,
         use: [
           {
-            loader: 'style-loader'
+            loader: 'style-loader',
+            options: {
+              sourceMap: true
+            }
           },
           { loader: 'css-loader' },
           { loader: 'postcss-loader' },
@@ -99,7 +102,7 @@ module.exports = {
       },
       {
         test: /\.pug$/,
-        use: ['html-loader', 'pug-html-loader']
+        use: ['pug-loader']
       }
     ]
   },

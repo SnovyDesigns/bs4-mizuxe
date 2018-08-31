@@ -43,7 +43,6 @@
     "postcss-combine-duplicated-selectors": "^6.0.2",
     "postcss-loader": "^3.0.0",
     "pug": "^2.0.3",
-    "pug-html-loader": "^1.1.5",
     "pug-loader": "^2.4.0",
     "react": "*",
     "react-dom": "*",
